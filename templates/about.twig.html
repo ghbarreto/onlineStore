@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet/less" type="text/css" media="screen" href="style/menu.less" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
+    <script src ="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="scripts/menu.js"></script>
+    <title>{{welcome}}</title>
+</head>
+<body>
+        {%include 'img.twig.html'%}
+    <div class="container" id="arrows">
+        {% include 'mobilenav.twig.html' %}
+    </div>
+    <nav id = "single-nav" role="navigation">
+        {% include 'navbar.twig.html' %}
+    </nav>   
+    <nav class="welcome">
+        {% include 'aboutcontent.twig.html' %}
+    </nav>
+    <div class="footer">
+        {% include 'footer.twig.html' %}
+    </div>
+    
+    
+</body>
+</html>

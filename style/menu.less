@@ -1,0 +1,703 @@
+@font: Arial, Helvetica, sans-serif;
+@hoverColor: rgb(25, 26, 27);
+@backgroundColor: #D5D5D5;
+@menus: rgba(0, 0, 0, 0.904);
+@headers: #96858f;
+@feedbackFont: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+@footerColor: black;
+
+
+table, th, td {
+  border: 0.1px groove rgba(0, 0, 0, 0.459);
+}
+th {
+  font-weight: 400;
+  background: #8a97a0;
+  color: #FFF;
+}
+tr {
+  background: #f4f7f8;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+}
+
+tr:nth-child(even) {
+  background: #e8eeef;
+}
+
+img{
+  width: 100%;
+  height: 200px;
+  
+}
+nav.welcome{
+  background-color: #f2f2f2;
+  text-align: center;
+  font-family: @font ;
+  border-radius: 15px;
+  margin: 10px;
+}
+nav h1{
+  color: @headers;
+&:hover{
+  color: white;
+  background-color: black;
+}
+}
+
+body{
+  background-color: @backgroundColor;
+}
+
+th, td {
+  text-align: left;
+  padding: 20px;
+  font-weight: 300;
+}
+
+tfoot tr {
+  background: none;
+}
+
+tfoot td {
+  padding: 10px 2px;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #8a97a0;
+}
+
+nav#dropdown{
+  display: none;
+}
+ul{
+  list-style: none;
+  margin-top: auto;
+}
+li{
+  text-decoration: none;
+}
+li a {
+  text-decoration: none;
+}
+//------------------- FOOTER ---------------------
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: @footerColor;
+  color: white;
+  text-align: center;
+}
+
+//------------------- STORE ---------------------
+  div.flexStore{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    .store{
+      background-color: rgb(250, 244, 252);
+      overflow: hidden;
+      padding: 20px;
+      margin: 3px;
+      border-style: groove;
+      width: 200px;
+      height: 300px;
+      border-radius: 15px;
+        #storeName{
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          color: rgb(233, 116, 116);
+          font-size: 20px;
+          margin-top: -15px;
+          margin-bottom: 10px;
+        }
+        #storeDescription{
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          width: 200px;
+          border-radius: 6px;
+          padding: 2px;
+          background-color: rgba(151, 135, 135, 0.404);
+        }
+        #storePrice{
+          color: rgb(100, 100, 192);
+          border-style: solid; 
+          border-color: white;
+          background-color: white;
+          border-radius: 6px;
+        }
+        #storeBuy a{
+          color: white;
+          text-decoration: none !important;
+          line-height: 40px;
+          color:  rgb(109, 201, 109);
+          font-size: 30px;
+            &:hover{
+              color: rgb(47, 119, 47);
+            }
+        }
+    }
+  }
+
+//------------------- PROPOSAL ---------------------
+a#proposal{
+  display: none;
+  justify-content: space-around;
+  font-family: @font;
+  background-color: @menus;
+  color: white;
+  text-decoration: none;
+    &:hover{
+      color: salmon;
+    }
+}
+//------------------- CART ---------------------
+#myCart{
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 30px;
+  margin-top: 20px;
+  background-color:#8a97a0;;
+}
+
+#cart{
+  justify-content: space-around;
+}
+
+  #cartCenter{
+    text-align: center;
+    text-decoration: none;
+
+    a#cartPlusA{
+      padding: 20px;
+      font-size: 20px;
+      display: center;
+      text-decoration: none;
+      font-style: normal;
+      border-style: ridge;
+      color: rgb(148, 148, 243);
+      &:hover{
+        color: rgb(96, 160, 96);
+      }
+
+      #cartPlus{
+        padding: 20px;
+        text-decoration: none;
+        font-size: 20px;
+      }
+    }
+  }
+
+//------------------- FEEDBACKS ---------------------
+  .feedbacks{
+    margin: 10px;
+    padding: 30px;
+    border-style: ridge;
+  }
+  form#formFeedback{
+    background-color: rgb(246, 249, 250);
+    width: 50%;
+    display: inline-block;
+    border-radius: 15px;
+  }
+  .feedbacks{
+    .feedbacksName{
+    display: flex ;
+    color: rgb(148, 147, 134);
+    font-family: @feedbackFont;
+    }
+    .feedbacksComment{
+      display: inline-block;
+      width: 60%;
+      font-family: @feedbackFont;
+    }
+    #nameFeedback{
+      font-weight: bold;
+      color: black;
+    }
+    
+  }
+  div#feedbackCount{
+    font-family: @feedbackFont;
+    font-weight: bold;
+    span#feedbackNumber{
+      color: rgb(238, 175, 175);
+    }
+  }
+  .feedbackPage{
+    color:lightgreen;
+  }
+//------------------- POP UPS ---------------------
+    #popupRed{
+      background-color: lightcoral;
+      border-radius: 3px;
+      text-align:center;
+      font-size: 13px;
+      font-family:Arial, Helvetica, sans-serif;
+      color: white;
+    }
+    #popupGreen{
+    background-color: lightgreen;
+    border-radius: 3px;
+    text-align:center;
+    font-size: 13px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    }
+
+  //------------------- BUTTON ---------------------
+  a#aButton{
+    text-decoration: none !important;
+    line-height: 20px;
+    color: #000;
+  }
+  #aButton{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    border-radius: 35px;
+    margin: 1rem auto;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+    text-align: center;
+    color: #98a0cc;
+    font-size: 13px;
+    span{
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: #868fc3;
+      -webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+      transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    &:hover {
+      color: #e1e3f0;
+      span {
+        width: 225%;
+        height: 562.5px;
+        position: absolute;
+        z-index: 0;
+      }
+    }
+  }
+
+@media screen and (max-width: 813px) {
+  /*
+  code for narrow screen goes in here.
+   */
+
+   //------------------- SET UP ---------------------
+    *{
+      font-family: @font;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    #imgHeader{
+      display: none;
+    }
+
+    #bttRemove{
+      color: red;
+      width: 40px;
+      font-size: 25px;
+      text-align: center;
+      text-decoration: none;
+        &:hover{
+          color:rgb(216, 167, 167);
+        }
+    }
+
+    //------------------- CART ---------------------
+
+    #storeImg > img{
+      justify-content: center;
+      width: 150px;
+      height: 100px;
+
+    }
+
+
+
+//------------------- LOGIN ---------------------
+    .boxLogin{
+      display: inline-block;
+    }
+
+    .login{
+        padding: 2px;
+        border: 2px  solid white;
+        width: 300px;
+        background-color: white;
+        border-radius: 6px;
+    }
+    div.btt:focus {
+      color:lightgreen;
+    }
+
+    span.signup{
+      width: 150px;
+      display: inline-block;
+      background-color: rgba(151, 13, 151, 0.712);
+      &:hover{
+        background-color: lightblue;
+      }
+    }
+    .signup{
+      display: block;
+      color: black;
+      margin-top: 4px;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+
+    .loginInput{
+      width: 150px;
+      margin: 2px;
+      height: 15px;
+    }
+
+    .submitbt{
+      width: 150px;
+      font-size: 12px;
+      border-radius: 3px;
+      background-color:lightsteelblue;
+        &:hover{
+          background-color: lightblue;
+          border-radius: 4px;
+        }
+    }
+    
+//------------------- MENU DROPDOWN ---------------------
+    nav.welcome{
+      background-color: #f2f2f2;
+      text-align: center; 
+      border-radius: 15px;
+      margin: 10px;
+    }
+
+    nav h1:hover{
+      background-color: #e6e1c9;
+    }
+
+    nav#single-nav{
+      float:none;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      height: 0;
+      overflow: hidden;
+      transition: 700ms ease;
+      position: absolute;
+    }
+
+    nav#single-nav.open{
+      height: 260px;
+      border-radius: 2px;
+    }
+
+    nav#dropdown{
+      font-size: 2.3em;
+      color: @menus;
+      cursor:pointer;
+    }
+
+    .welcome h1{
+      color: @headers *0.5;
+      font-weight: bold;
+    }
+
+    .icon{
+      font-size: 1em;
+      margin-top: 2.2px;
+      display: none;
+      }
+      #single-nav ul{
+        margin-top: 1px;
+        border-radius: 8px;
+        background-color: @menus;
+        font-size: 20px;
+      }
+      #single-nav ul li a{
+        padding:10px;
+        color:#fff;
+        border-bottom: 1px solid #404040;
+        display:block;
+        margin: 0;
+      }
+      ul.mobileUL{
+        display:flex;
+        justify-content: space-around;
+      }
+
+      .selectLog{
+        display:flex;
+        justify-content: space-around;
+        text-align: center;
+        background-color: @menus;
+        width:100%;
+        &:hover{
+          background-color: lightsteelblue;
+          cursor: pointer;
+        }
+      }
+
+      .iconMobile{
+        color:white;
+        margin-top: 3px;
+      }
+
+      .btt{
+        .iconMobile;
+      }
+
+
+      #single-nav ul li:nth-child(1):hover{
+        background-color: @hoverColor;
+        text-decoration: none;
+      }
+      #single-nav ul li:nth-child(2):hover{
+        background-color: @hoverColor;
+      }
+      #single-nav ul li:nth-child(3):hover{
+        background-color: @hoverColor;
+      }
+      #single-nav ul li:nth-child(4):hover{
+        background-color: @hoverColor;
+      }
+      #single-nav ul li:nth-child(5):hover{
+        background-color: @hoverColor;
+      }
+      #single-nav a{
+        color: white;
+
+      }
+    }
+
+//------------------- MENU TRANSFORM ---------------------
+
+      .container {
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+
+      .change .bar2 {
+        opacity: 0;
+      }
+
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+
+//------------------- A LINKS ---------------------
+      a.aHovers{
+        text-decoration: none;
+        font-weight: bold;
+        color: lightsalmon;
+        &:hover{
+          color: red;
+        }
+      }
+
+ 
+
+
+
+
+@media screen and (min-width:814px) {
+/*
+code for wide screen goes in here.
+*/
+
+//------------------- WEB SETUP ---------------------
+
+#navCart{
+  display: grid;
+}
+
+//------------------- LOGIN ---------------------
+.boxLogin{
+  display: inline-block;
+}
+.login{
+    padding: 2px;
+    border: 2px  solid white;
+    width: 300px;
+    background-color: white;
+    border-radius: 6px;
+}
+.loginInput{
+  width: 150px;
+  margin: 2px;
+  height: 15px;
+}
+
+.signupA{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+}
+
+.signup{
+display: block;
+margin-top: 4px;
+font-size: 12px;
+.submitbt;
+background-color: rgb(172, 120, 172);
+  &:hover{
+    background-color: lightpink;
+  }
+}
+.submitbt{
+  width: 158px;
+  background-color:lightsteelblue;
+  text-decoration: none;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  &:hover{
+    background-color: lightblue;
+    border-radius: 4px;
+  }
+}
+//------------------- PROPOSAL ---------------------
+#proposal{
+display:flex;
+justify-content: space-around;
+font-family: @font;
+background-color: @menus;
+display:none;
+color: white;
+text-decoration: none;
+&:hover{
+  color: salmon;
+}
+}
+
+.cartPage{
+  color:lightgreen;
+}
+
+//------------------- MENU & HOVERS ---------------------
+.icon{
+  font-size: 1.2em;
+  margin-top: 3px;
+}
+#single-nav ul{
+  display:flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: @menus;
+  font-family: @font;
+  margin-top: -4px;
+}
+
+#single-nav ul li:nth-child(1):hover{
+  background-color: @hoverColor;
+  text-decoration: none;
+}
+#single-nav ul li:nth-child(2):hover{
+  background-color: @hoverColor;
+}
+#single-nav ul li:nth-child(3):hover{
+  background-color: @hoverColor;
+}
+#single-nav ul li:nth-child(4):hover{
+  background-color: @hoverColor;
+}
+#single-nav ul li:nth-child(5):hover{
+  background-color: @hoverColor;
+}
+#single-nav a{
+  color: white;
+
+}
+
+#single-nav li{
+  flex: 1 0 auto;
+  text-align: center;
+}
+.infos{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+ul.mobileUL{
+  display:flex;
+  justify-content: space-around;
+}
+
+.selectLog{
+  display:flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color:@menus;
+  width:100%;
+  &:hover{
+    background-color: lightsteelblue;
+    cursor: pointer;
+  }
+}
+
+.iconMobile{
+  color:white;
+  margin-top: 3px;
+}
+a.aHovers{
+  text-decoration: none;
+  font-weight: bold;
+  color: lightsalmon;
+  &:hover{
+    color: red;
+  }
+}
+#arrows{
+  display: none;
+}
+.btt{
+  .iconMobile;
+}
+
+
+#bttRemove{
+  color: rgb(233, 116, 116);
+  width: 40px;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  &:hover{
+    color:rgb(216, 167, 167);
+  }
+}
+
+#storeImg > img{
+  justify-content: center;
+  width: 150px;
+  height: 100px;
+
+}
+}
