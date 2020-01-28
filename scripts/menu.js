@@ -3,9 +3,6 @@ $(document).ready(function () {
         $("#arrows").toggleClass("change"); // menu X
         $("#single-nav").toggleClass("open"); // menu open
     });
-    $('#example').barrating({ // call the stars class
-        theme: 'fontawesome-stars'
-    });
     $(this).scrollTop(0); // starts at the top of the page
 
     $('#messages').load('../php/show.php');
