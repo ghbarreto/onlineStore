@@ -6,7 +6,7 @@ Instance php.
 //  db setup
 define('HOST', '127.0.0.1');
 define('user', 'ghbarreto');
-define('password', '');
+define('password', 's');
 define('db', 'login');
 
 $conn = mysqli_connect(HOST, user, password, db) or die('wasnt able to connect');
